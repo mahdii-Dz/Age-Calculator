@@ -5,6 +5,10 @@ let months = document.getElementById('months');
 let days = document.getElementById('days');
 
 function calculateAge(){
+    if(!userInput.value){
+        alert('Please select a valid date.');
+        return;
+    }
     let birthDate = new Date(userInput.value);
 
     let d1 = birthDate.getDate();
